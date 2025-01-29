@@ -1,0 +1,193 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffe4e1;
+    color: #333;
+}
+
+.form-container {
+    max-width: 800px;
+    margin: 2rem auto;
+    background: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #444;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.form-group input[type="radio"],
+.form-group input[type="checkbox"] {
+    margin-right: 0.5rem;
+}
+
+.form-group textarea {
+    resize: vertical;
+    height: 100px;
+}
+
+.form-group .options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.form-group .options label {
+    display: flex;
+    align-items: center;
+}
+
+.form-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.form-row .form-group {
+    flex: 1;
+}
+
+.form-footer {
+    text-align: center;
+}
+
+.form-footer button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 0.8rem 2rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.form-footer button:hover {
+    background-color: #45a049;
+}
+
+label.required:after {
+    content: "*";
+    color: red;
+    font-size: 1rem; /* ขนาดของเครื่องหมาย * ให้ใกล้เคียงกับ h2 */
+    font-family:  "Pridi", serif; /* ฟอนต์เหมือนกับที่ใช้ใน h2 */
+    display: inline;
+    margin-left: 5px; /* เพิ่มช่องว่างระหว่างข้อความกับ * */
+    vertical-align: middle; /* จัดตำแหน่งให้อยู่ระดับเดียวกับข้อความ */
+    font-weight: 200;
+}
+
+
+.note {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+
+
+
+/* Modal */
+/* Modal */
+.modal {
+    display: none; /* ซ่อน Modal เริ่มต้น */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* พื้นหลังมืด */
+    backdrop-filter: blur(5px); /* เพิ่มเอฟเฟกต์เบลอให้พื้นหลัง */
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 10% auto; /* ปรับตำแหน่ง Modal ให้อยู่กลางหน้าจอ */
+    padding: 30px;
+    border-radius: 12px; /* เพิ่มความโค้งของมุม */
+    width: 350px; /* ปรับความกว้างของ Modal */
+    text-align: center;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* เพิ่มเงาให้ Modal */
+    position: relative;
+}
+
+.close {
+    color: #aaa;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s ease; /* เพิ่มเอฟเฟกต์เปลี่ยนสีเมื่อ hover */
+}
+
+.close:hover {
+    color: #000;
+}
+
+#modalConfirm {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    transition: background-color 0.3s ease; /* เพิ่มเอฟเฟกต์เปลี่ยนสีเมื่อ hover */
+    margin-top: 20px; /* เพิ่มระยะห่างด้านบน */
+}
+
+#modalConfirm:hover {
+    background-color: #45a049;
+}
+
+/* เพิ่มสไตล์สำหรับข้อความใน Modal */
+.modal-content h2 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.modal-content p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+
+
+
+
+/*  อื่นๆ  */
+#otherInputContainer input {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-top: 10px;
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Repair History</title>
+    <link rel="stylesheet" href="/css/history.css">
+</head>
+<body>
+    <h2>ประวัติการซ่อมบำรุงหอพัก</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>วันที่และเวลา</th>
+                <th>ชื่อ-สกุล</th>
+                <th>ห้อง</th>
+                <th>ประเภทงาน</th>
+                <th>รายละเอียด</th>
+                <th>เบอร์โทร</th>
+                <th>สถานะ</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% history.forEach(row => { %>
+            <tr>
+                <td><%= row.id %></td>
+                <td><%= row.date_time %></td>
+                <td><%= row.name %></td>
+                <td><%= row.room %></td>
+                <td><%= row.job_type %></td>
+                <td><%= row.details %></td>
+                <td><%= row.phone %></td>
+                <td><span class="status-<%= row.status.toLowerCase() %>"><%= row.status %></span></td>
+            </tr>
+            <% }) %>
+        </tbody>
+    </table>
+</body>
+</html>
